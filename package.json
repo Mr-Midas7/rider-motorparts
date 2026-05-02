@@ -1,0 +1,20 @@
+{
+  "name": "rider-motorparts",
+  "version": "1.0.0",
+  "description": "Rider Motorparts - Professional Motorcycle Appointment Scheduling System",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx serve . -p 3000 --open",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": ["motorcycle", "appointment", "scheduling", "supabase"],
+  "author": "Rider Motorparts",
+  "license": "MIT"
+}

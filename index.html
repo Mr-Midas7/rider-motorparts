@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider Motorparts — Book Your Appointment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ LOADER ══ -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">RIDER</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ NAV ══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <span class="logo"><img src="fakr.jpg" alt="RIDER MOTORPARTS" /></span>
+      <span class="logo-text">RIDER<em>MOTORPARTS</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#parts">Parts & Gear</a></li>
+      <li><a href="#book">Book Now</a></li>
+      <li><a href="#lookup">My Booking</a></li>
+    </ul>
+    <a href="#book" class="nav-cta">Book Appointment</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#services">Services</a>
+    <a href="#parts">Parts & Gear</a>
+    <a href="#book">Book Now</a>
+    <a href="#lookup">My Booking</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🏍️ Metro's #1 Motorcycle Shop</div>
+    <h1 class="hero-title">
+      <span class="line-1">YOUR RIDE.</span>
+      <span class="line-2">OUR <em>PASSION.</em></span>
+    </h1>
+    <p class="hero-sub">Professional motorcycle repair, upgrades, accessories &amp; maintenance. Book your slot in under 2 minutes.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn-primary">Book an Appointment</a>
+      <a href="#services" class="btn-ghost">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>2,400+</strong><span>Bikes Serviced</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><strong>8 Yrs</strong><span>Experience</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-bike-wrap">
+      <div class="hero-bike">🏍️</div>
+      <div class="hero-ring r1"></div>
+      <div class="hero-ring r2"></div>
+      <div class="hero-ring r3"></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ MARQUEE ══ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>⚡ ENGINE TUNE-UP</span><span>🛑 BRAKE OVERHAUL</span><span>💨 EXHAUST UPGRADE</span>
+    <span>🛢️ OIL CHANGE</span><span>💻 ECU REMAP</span><span>💡 LED LIGHTING</span>
+    <span>🔩 CHAIN SERVICE</span><span>🏍️ SUSPENSION SETUP</span><span>📍 GPS INSTALL</span>
+    <span>⚡ ENGINE TUNE-UP</span><span>🛑 BRAKE OVERHAUL</span><span>💨 EXHAUST UPGRADE</span>
+    <span>🛢️ OIL CHANGE</span><span>💻 ECU REMAP</span><span>💡 LED LIGHTING</span>
+    <span>🔩 CHAIN SERVICE</span><span>🏍️ SUSPENSION SETUP</span><span>📍 GPS INSTALL</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ SERVICES ══ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">WHAT WE DO</div>
+      <h2>Expert <em>Services</em></h2>
+      <p>From quick maintenance to full performance builds — we handle it all.</p>
+    </div>
+    <div class="services-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="repair">Repair</button>
+      <button class="filter-btn" data-filter="upgrade">Upgrades</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+      <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+    </div>
+    <div class="services-grid" id="servicesGrid">
+      <!-- Injected by JS -->
+      <div class="services-loading">Loading services…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PARTS SHOWCASE ══ -->
+<section id="parts">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">PARTS & GEAR</div>
+      <h2>Premium <em>Products</em></h2>
+      <p>Top-tier brands. Authentic parts. Fast installation available.</p>
+    </div>
+    <div class="products-filter">
+      <button class="filter-btn active" data-pfilter="all">All</button>
+      <button class="filter-btn" data-pfilter="upgrades">Upgrades</button>
+      <button class="filter-btn" data-pfilter="accessories">Accessories</button>
+      <button class="filter-btn" data-pfilter="parts">Parts</button>
+      <button class="filter-btn" data-pfilter="maintenance">Maintenance</button>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <div class="services-loading">Loading products…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ WHY US ══ -->
+<section id="why">
+  <div class="container">
+    <div class="why-layout">
+      <div class="why-left">
+        <div class="section-tag">WHY RIDER</div>
+        <h2>The Shop <em>Built</em><br>For Riders.</h2>
+        <p>We're not just mechanics — we're motorcycle enthusiasts who understand your machine and your passion.</p>
+        <a href="#book" class="btn-primary">Schedule Now</a>
+      </div>
+      <div class="why-right">
+        <div class="why-card">
+          <div class="why-icon">🔧</div>
+          <div>
+            <h4>Certified Technicians</h4>
+            <p>All mechanics are factory-trained and certified for all major brands.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⏱️</div>
+          <div>
+            <h4>On-Time Guarantee</h4>
+            <p>Your bike ready when promised — or the labor is on us.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <div>
+            <h4>Genuine Parts Only</h4>
+            <p>We source authentic OEM and premium aftermarket components exclusively.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <div>
+            <h4>Live Job Updates</h4>
+            <p>SMS and email notifications as your service progresses in real time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ BOOKING ══ -->
+<section id="book">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">SCHEDULE A VISIT</div>
+      <h2>Book Your <em>Appointment</em></h2>
+      <p>Fill in the form and we'll confirm your slot within the hour.</p>
+    </div>
+
+    <div class="booking-layout">
+      <!-- Steps Sidebar -->
+      <div class="booking-steps">
+        <div class="step active" data-step="1">
+          <div class="step-num">01</div>
+          <div class="step-info"><strong>Your Details</strong><span>Name, contact info</span></div>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-num">02</div>
+          <div class="step-info"><strong>Your Motorcycle</strong><span>Brand, model, year</span></div>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-num">03</div>
+          <div class="step-info"><strong>Select Service</strong><span>What you need done</span></div>
+        </div>
+        <div class="step" data-step="4">
+          <div class="step-num">04</div>
+          <div class="step-info"><strong>Pick Schedule</strong><span>Date and time slot</span></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="booking-form-wrap">
+        <div id="bookingForm">
+
+          <!-- STEP 1: Customer Info -->
+          <div class="form-step active" id="step1">
+            <h3>Personal <em>Information</em></h3>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label>Full Name <span class="req">*</span></label>
+                <input type="text" id="customerName" placeholder="e.g. Juan dela Cruz" />
+                <span class="field-err" id="errName"></span>
+              </div>
+              <div class="form-group">
+                <label>Email Address <span class="req">*</span></label>
+                <input type="email" id="customerEmail" placeholder="juan@email.com" />
+                <span class="field-err" id="errEmail"></span>
+              </div>
+              <div class="form-group">
+                <label>Phone Number <span class="req">*</span></label>
+                <input type="tel" id="customerPhone" placeholder="09XX-XXX-XXXX" />
+                <span class="field-err" id="errPhone"></span>
+              </div>
+            </div>
+            <button class="btn-primary btn-next" onclick="nextStep(1)">Continue →</button>
+          </div>
+
+          <!-- STEP 2: Motorcycle Info -->
+          <div class="form-step" id="step2">
+            <h3>Your <em>Motorcycle</em></h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Brand <span class="req">*</span></label>
+                <select id="motosBrand">
+                  <option value="">Select Brand</option>
+                  <option>Honda</option><option>Yamaha</option><option>Kawasaki</option>
+                  <option>Suzuki</option><option>Ducati</option><option>BMW</option>
+                  <option>KTM</option><option>Triumph</option><option>Harley-Davidson</option>
+                  <option>Royal Enfield</option><option>CFMoto</option><option>Other</option>
+                </select>
+                <span class="field-err" id="errBrand"></span>
+              </div>
+              <div class="form-group">
+                <label>Model <span class="req">*</span></label>
+                <input type="text" id="motosModel" placeholder="e.g. CBR600RR, R3, Ninja 400" />
+                <span class="field-err" id="errModel"></span>
+              </div>
+              <div class="form-group">
+                <label>Year</label>
+                <input type="number" id="motosYear" placeholder="e.g. 2022" min="1980" max="2026" />
+              </div>
+              <div class="form-group">
+                <label>Plate Number</label>
+                <input type="text" id="motosPlate" placeholder="ABC 1234" />
+              </div>
+            </div>
+            <div class="btn-row">
+              <button class="btn-ghost" onclick="prevStep(2)">← Back</button>
+              <button class="btn-primary btn-next" onclick="nextStep(2)">Continue →</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Service Selection -->
+          <div class="form-step" id="step3">
+            <h3>Choose a <em>Service</em></h3>
+            <div class="service-select-filter">
+              <button class="filter-btn active" data-scat="all">All</button>
+              <button class="filter-btn" data-scat="repair">Repair</button>
+              <button class="filter-btn" data-scat="upgrade">Upgrade</button>
+              <button class="filter-btn" data-scat="accessories">Accessories</button>
+              <button class="filter-btn" data-scat="maintenance">Maintenance</button>
+            </div>
+            <div class="service-select-grid" id="serviceSelectGrid">
+              <!-- Injected by JS -->
+            </div>
+            <span class="field-err" id="errService"></span>
+            <div class="form-group full" style="margin-top:1.5rem">
+              <label>Additional Notes</label>
+              <textarea id="additionalNotes" rows="3" placeholder="Describe any specific issues or requests…"></textarea>
+            </div>
+            <div class="btn-row">
+              <button class="btn-ghost" onclick="prevStep(3)">← Back</button>
+              <button class="btn-primary btn-next" onclick="nextStep(3)">Continue →</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Date & Time -->
+          <div class="form-step" id="step4">
+            <h3>Pick a <em>Schedule</em></h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Preferred Date <span class="req">*</span></label>
+                <input type="date" id="apptDate" />
+                <span class="field-err" id="errDate"></span>
+              </div>
+              <div class="form-group">
+                <label>Time Slot <span class="req">*</span></label>
+                <select id="apptTime">
+                  <option value="">Select a time</option>
+                  <option value="08:00">8:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                </select>
+                <span class="field-err" id="errTime"></span>
+              </div>
+            </div>
+
+            <!-- Booking Summary -->
+            <div class="booking-summary" id="bookingSummary"></div>
+
+            <div class="btn-row">
+              <button class="btn-ghost" onclick="prevStep(4)">← Back</button>
+              <button class="btn-primary" id="submitBtn" onclick="submitBooking()">
+                <span id="submitText">Confirm Booking</span>
+                <span id="submitSpinner" class="spinner hidden"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="form-step" id="stepSuccess">
+            <div class="success-wrap">
+              <div class="success-icon">✅</div>
+              <h3>Booking <em>Confirmed!</em></h3>
+              <p>Your appointment has been scheduled. Check your email for a confirmation.</p>
+              <div class="success-ref" id="successRef"></div>
+              <p class="success-note">Bring this reference code when you visit. See you at the shop! 🏍️</p>
+              <div class="btn-row" style="justify-content:center;gap:1rem;flex-wrap:wrap">
+                <button class="btn-ghost" onclick="newBooking()">Book Another</button>
+                <a href="#lookup" class="btn-primary">Track My Appointment</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">HAPPY RIDERS</div>
+      <h2>What They <em>Say</em></h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ LOOKUP ══ -->
+<section id="lookup">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">TRACK YOUR VISIT</div>
+      <h2>Check Your <em>Booking</em></h2>
+      <p>Enter your booking reference or email to see the status of your appointment.</p>
+    </div>
+    <div class="lookup-box">
+      <div class="lookup-form">
+        <div class="form-group">
+          <label>Booking Reference or Email</label>
+          <input type="text" id="lookupInput" placeholder="e.g. RMP-ABCD1234 or your email" />
+        </div>
+        <button class="btn-primary" onclick="lookupBooking()">
+          <span id="lookupText">Search</span>
+          <span id="lookupSpinner" class="spinner hidden"></span>
+        </button>
+      </div>
+      <div id="lookupResult"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FOOTER ══ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">RIDER<em>MOTORPARTS</em></span>
+        </div>
+        <p>Metro's most trusted motorcycle service center. Ride hard, ride maintained.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Services</h5>
+        <a href="#services">Repair & Fixes</a>
+        <a href="#services">Performance Upgrades</a>
+        <a href="#services">Accessories Install</a>
+        <a href="#services">Maintenance</a>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <a href="#book">Book Appointment</a>
+        <a href="#parts">Parts & Gear</a>
+        <a href="#lookup">Track Booking</a>
+        <a href="#why">About Us</a>
+      </div>
+      <div class="footer-contact">
+        <h5>Visit Us</h5>
+        <p>📍 Barangay Santa Cruz, Baclayon, Bohol </p>
+        <p>📞 (+639)09926067723-MOTORPH</p>
+        <p>📧 fakerider@ridermotorparts.ph</p>
+        <p>🕐 Mon–Sat: 8AM – 6PM | Sun: 9AM – 3PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FakeRider Motorparts. All rights reserved.</p>
+      <p>Built for riders, by riders. 🏍️</p>
+      
+    </div>
+  </div>
+</footer> 
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast" class="toast hidden"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+<!-- ═══════════════════════════════════════════ TAWK.TO CHAT ══ -->
+<!--
+  SETUP: Replace YOUR_PROPERTY_ID/YOUR_WIDGET_ID with your actual
+  Tawk.to embed IDs from: Dashboard → Administration → Chat Widget
+-->
+<script type="text/javascript">
+  // Pre-fill visitor info when customer has already entered their name/email
+  // in the booking form — so they don't have to type it again in the chat.
+  var Tawk_API = Tawk_API || {};
+
+  Tawk_API.onLoad = function() {
+    const name  = document.getElementById('customerName')?.value.trim();
+    const email = document.getElementById('customerEmail')?.value.trim();
+    const phone = document.getElementById('customerPhone')?.value.trim();
+
+    if (name || email) {
+      Tawk_API.setAttributes({
+        name:  name  || 'Customer',
+        email: email || '',
+        phone: phone || '',
+      }, function(error) {});
+    }
+
+    // Also update when the customer fills in Step 1 of the booking form
+    ['customerName','customerEmail','customerPhone'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('blur', function() {
+        const n = document.getElementById('customerName')?.value.trim();
+        const e = document.getElementById('customerEmail')?.value.trim();
+        const p = document.getElementById('customerPhone')?.value.trim();
+        if (n || e) {
+          Tawk_API.setAttributes({ name: n || 'Customer', email: e || '', phone: p || '' }, function() {});
+        }
+      });
+    });
+  };
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69f34865b402371c38a67431/1jnf55jgi'; /* ← replace this */
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
+
+<script>
+  let logoClicks = 0;
+  let logoTimer;
+  document.querySelector('.nav-logo').addEventListener('click', function(e) {
+    logoClicks++;
+    clearTimeout(logoTimer);
+    if (logoClicks >= 3) {
+      logoClicks = 0;
+      window.location.href = 'admin-login.html';
+    }
+    logoTimer = setTimeout(() => { logoClicks = 0; }, 1000);
+  });
+</script>
